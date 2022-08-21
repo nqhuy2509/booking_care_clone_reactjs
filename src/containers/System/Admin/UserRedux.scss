@@ -1,0 +1,16 @@
+.preview-img-container {
+    display: flex;
+
+    .preview-img-label {
+        width: 30%;
+    }
+
+    .preview-img {
+        width              : 70%;
+        height             : 100px;
+        background-size    : cover;
+        background-repeat  : no-repeat;
+        background-position: center center;
+        cursor             : pointer;
+    }
+}

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.section-container {
+    height     : 330px;
+    padding    : 20px 45px;
+    font-family: 'Montserrat', sans-serif;
+
+    .section-title {
+        margin-bottom  : 25px;
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+        padding        : 0 22px 0 5px;
+
+        h2 {
+            font-size  : 24px;
+            font-weight: 600;
+        }
+
+        button {
+            border          : none;
+            outline         : none;
+            background-color: #ebebeb;
+            padding         : 10px 15px;
+            font-size       : 11px;
+            text-transform  : uppercase;
+
+            &:hover {
+                background-color: #f7d800;
+                color           : white;
+            }
+        }
+    }
+
+    .section-body {
+        .section-content {
+            height : 200px;
+            padding: 0 5px;
+            cursor : pointer;
+
+            &:hover {
+                color: #4fbee3;
+            }
+
+            img {
+                height: 90%;
+                width : 100%;
+            }
+
+            h5 {
+                font-size  : 14px;
+                font-weight: 400;
+                margin-top : 5px;
+            }
+        }
+    }
+}
+
+//reset slick slider css
+.slick-prev {
+    border: 2px solid #e1e1e1 !important;
+
+    left            : -10px !important;
+    z-index         : 5;
+    background-color: white !important;
+    width           : 44px !important;
+    height          : 48px !important;
+    opacity         : 0.7;
+    top             : 110px !important;
+
+    &.slick-disabled {
+        display: none !important;
+    }
+
+    &::before {
+        content   : url('../../assets/images/section/icon/angle-left-solid.svg') !important;
+        display   : block !important;
+        text-align: center !important;
+        width     : 25px !important;
+        position  : relative;
+        top       : -2px;
+        left      : 5px;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.slick-next {
+    width           : 44px !important;
+    height          : 48px !important;
+    border          : 2px solid #e1e1e1 !important;
+    right           : -10px !important;
+    background-color: white !important;
+    top             : 110px !important;
+    opacity         : 0.7;
+
+    &.slick-disabled {
+        display: none !important;
+    }
+
+    &::before {
+        content   : url('../../assets/images/section/icon/angle-right-solid.svg') !important;
+        display   : block !important;
+        text-align: center !important;
+        width     : 25px !important;
+        position  : relative;
+
+        top  : -2px;
+        right: -11px;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}

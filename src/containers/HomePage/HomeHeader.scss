@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.home-header-container {
+    height          : 70px;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    background-color: white;
+    z-index         : 10;
+    box-shadow      : 0 3px 5px rgba(57, 63, 72, 0.3);
+
+    font-family: 'Montserrat', sans-serif;
+
+    .home-header-content {
+        width  : 100%;
+        height : 100%;
+        display: flex;
+        padding: 0 20px;
+
+        .left-content {
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+
+
+            i {
+                font-size   : 20px;
+                color       : gray;
+                cursor      : pointer;
+                margin-right: 10px;
+            }
+
+            .header-logo {
+                background: url('../../assets/images/header/icon/bookingcare-2020.svg') center no-repeat;
+                height    : 50%;
+                width     : 50%;
+                cursor    : pointer;
+            }
+        }
+
+        .center-content {
+            display        : flex;
+            align-items    : center;
+            padding        : 0 20px;
+            justify-content: space-between;
+
+            .child-content {
+                cursor: pointer;
+
+                b {
+                    font-size  : 12px;
+                    font-weight: 600;
+                }
+
+                .description {
+                    font-size: 10px;
+                }
+            }
+
+
+        }
+
+        .right-content {
+            display        : flex;
+            align-items    : center;
+            justify-content: flex-end;
+            padding-right  : 15px;
+
+            .support {
+                margin-right: 20px;
+                cursor      : pointer;
+
+                i {
+                    color: #4fbee3;
+                }
+            }
+
+            .language-vi {
+
+                margin-right: 10px;
+                cursor      : pointer;
+
+                &:hover {
+                    color: #ffc41a;
+                }
+
+                &.active {
+                    color: #45c3d2;
+                }
+            }
+
+            .language-en {
+                cursor: pointer;
+
+                &:hover {
+                    color: #ffc41a;
+                }
+
+                &.active {
+                    color: #45c3d2;
+                }
+            }
+        }
+    }
+}
+
+
+.home-header-banner {
+    position          : relative;
+    top               : 70px;
+    background        : url('../../assets/images/header/header-background.jpg') center center no-repeat;
+    background-size   : cover;
+    // padding-top    : 45px;
+    font-family       : 'Montserrat', sans-serif;
+    margin-bottom     : 70px;
+
+    .section1 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.1));
+        padding-top     : 45px;
+    }
+
+    h1 {
+        text-align    : center;
+        font-size     : 32px;
+        color         : white;
+        text-transform: uppercase;
+        text-shadow   : 1px 1px 1px #333;
+        display       : flex;
+        flex-direction: column;
+
+        b {
+            margin-top : 12px;
+            font-weight: 600;
+        }
+
+
+    }
+
+    .search {
+        text-align      : center;
+        margin-top      : 20px;
+        background-color: #f7d800;
+        width           : 40%;
+        margin          : 25px auto 0;
+        height          : 50px;
+        display         : flex;
+        align-items     : center;
+        border-radius   : 45px;
+        padding         : 0 25px 0 18px;
+        border          : 1px solid transparent;
+
+        input {
+            width      : 100%;
+            margin-left: 15px;
+            background : transparent;
+            border     : none;
+            outline    : none;
+            font-size  : 15px;
+            font-weight: 400;
+        }
+
+        i {
+            font-size: 16px;
+        }
+    }
+
+
+
+
+    .app {
+        margin-top: 40px;
+        text-align: center;
+
+        img {
+            height: 32px;
+            margin: 0 15px;
+        }
+    }
+
+    .options {
+        padding         : 75px 30px 20px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+        display         : flex;
+        align-items     : baseline;
+        justify-content : center;
+        flex-wrap       : wrap;
+
+        .option-item {
+            text-align : center;
+            width      : 150px;
+            font-size  : 16px;
+            font-weight: 700;
+            margin     : 5px;
+            padding    : 5px 15px;
+            color      : #333;
+            cursor     : pointer;
+
+            &:hover {
+                color: #45c3d2;
+            }
+
+            .icon {
+                width              : 50px;
+                height             : 50px;
+                background-color   : white;
+                border-radius      : 50%;
+                margin             : auto;
+                background-size    : 32px;
+                background-repeat  : no-repeat;
+                background-position: center;
+            }
+
+            span {
+                font-weight: 600;
+                text-align : center;
+            }
+
+
+
+
+
+            .icon1 {
+                background-image: url('../../assets/images/header/icon/133537-khamchuyenkhoa.png');
+            }
+
+            .icon2 {
+                background-image: url('../../assets/images/header/icon/133657-khamtuxa.png');
+
+            }
+
+            .icon3 {
+                background-image: url('../../assets/images/header/icon/133744-khamtongquat.png');
+
+            }
+
+            .icon4 {
+                background-image: url('../../assets/images/header/icon/133744-dichvuxetnghiem.png');
+
+            }
+
+            .icon5 {
+                background-image: url('../../assets/images/header/icon/133744-suckhoetinhthan.png');
+
+            }
+
+            .icon6 {
+                background-image: url('../../assets/images/header/icon/104635-khamnhakhoa.png');
+
+            }
+
+            .icon7 {
+                background-image: url('../../assets/images/header/icon/151930-phau-thuat.jpg');
+
+            }
+
+            .icon8 {
+                background-image: url('../../assets/images/header/icon/133744-khamtainha.png');
+
+            }
+
+            .icon9 {
+                background-image: url('../../assets/images/header/icon/101157-icon-lich-su.jpg');
+
+            }
+        }
+    }
+
+}

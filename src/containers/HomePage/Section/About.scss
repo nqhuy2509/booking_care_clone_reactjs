@@ -1,0 +1,23 @@
+.about {
+    padding: 45px;
+    height : auto !important;
+
+
+    .about-content {
+        display: flex;
+
+        .content-left {
+            width : 50%;
+            height: auto;
+        }
+
+        .content-right {
+            width: 50%;
+
+            p {
+                text-align: justify;
+                font-style: italic;
+            }
+        }
+    }
+}
