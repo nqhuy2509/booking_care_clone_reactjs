@@ -9,7 +9,7 @@
 		"medical-package": "Medical Package",
 		"health-check": "General health check",
 		"help": "Help",
-		"medical-background": "medical background",
+		"medical-background": "medical platform",
 		"health-care": "comprehensive health care",
 		"specialist-examination": "Specialist examination",
 		"remote-examination": "Remote examination",
@@ -61,6 +61,12 @@
 		"roleid": "Role",
 		"image": "Avatar",
 		"upload": "Upload",
-		"save": "Save"
+		"save": "Save",
+		"edit": "Save changes",
+		"cancel": "Cancel"
+	},
+	"homepage": {
+		"otd-doctor": "Last week's featured doctor",
+		"more-info": "More info"
 	}
 }

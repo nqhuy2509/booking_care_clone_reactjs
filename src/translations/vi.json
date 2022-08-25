@@ -61,6 +61,12 @@
 		"roleid": "Vai trò",
 		"image": "Ảnh đại diện",
 		"upload": "Tải ảnh",
-		"save": "Lưu"
+		"save": "Lưu",
+		"edit": "Lưu thay đổi",
+		"cancel": "Hủy"
+	},
+	"homepage": {
+		"otd-doctor": "Bác sĩ nổi bật tuần qua",
+		"more-info": "Xem thêm"
 	}
 }

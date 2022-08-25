@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.doctor-detail-container {
+    font-family: 'Montserrat', sans-serif;
+
+    margin-top : 70px;
+    padding-top: 10px;
+
+    .doctor-info {
+        margin-top: 10px;
+        display   : flex;
+
+
+        .doctor-image {
+            margin-right: 15px;
+
+            img {
+                border-radius: 50%;
+                width        : 120px;
+                height       : 120px;
+
+            }
+        }
+
+        .doctor-description {
+            padding-top: 5px;
+
+            h2 {
+                font-size  : 27px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .doctor-detail {
+        border-top      : 1px solid #ccc;
+        padding-top     : 15px;
+        background-color: #f5f5f5;
+    }
+
+}
