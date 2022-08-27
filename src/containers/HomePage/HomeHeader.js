@@ -5,12 +5,17 @@ import gplay from '../../assets/images/header/icon/google-play-badge.svg';
 import appstore from '../../assets/images/header/icon/app-store-badge-black.svg';
 import { FormattedMessage } from 'react-intl';
 import { LANGUAGES } from '../../utils/constant';
+import { withRouter } from 'react-router';
 
 import { changeLanguageApp } from '../../store/actions';
 
 class Header extends Component {
 	changeLanguage = (language) => {
 		this.props.changeLanguageRedux(language);
+	};
+
+	returnToHome = () => {
+		this.props.history.push('/home');
 	};
 
 	render() {
@@ -22,7 +27,9 @@ class Header extends Component {
 					<div className='home-header-content'>
 						<div className='left-content w-25'>
 							<i className='fas fa-bars'></i>
-							<div className='header-logo'></div>
+							<div
+								className='header-logo'
+								onClick={() => this.returnToHome()}></div>
 						</div>
 						<div className='center-content w-50'>
 							<div className='child-content'>
@@ -203,4 +210,4 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));

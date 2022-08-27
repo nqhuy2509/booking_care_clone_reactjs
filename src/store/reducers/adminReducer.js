@@ -96,6 +96,7 @@ const adminReducer = (state = initialState, action) => {
 				...state,
 			};
 		case actionTypes.FETCH_INFO_DOCTOR_FAILED:
+			state.doctorData = [];
 			return { ...state };
 		case actionTypes.FETCH_DETAIL_DOCTOR_SUCCESS:
 			state.doctorDetail = action.data;

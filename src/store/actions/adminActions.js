@@ -301,7 +301,7 @@ export const saveEditInfoDoctor = (data) => {
 					type: actionTypes.SAVE_EDIT_INFO_DOCTOR_SUCCESS,
 				});
 
-				toast.success('Save doctor info success');
+				toast.success('Save changes doctor info success');
 			} else {
 				dispatch({
 					type: actionTypes.SAVE_EDIT_INFO_DOCTOR_FAILED,

@@ -29,7 +29,6 @@ class TopDoctor extends Component {
 	}
 
 	handleDetailDoctor = (doctor) => {
-		console.log(doctor);
 		this.props.history.push(`/detail-doctor/${doctor.id}`);
 	};
 
@@ -65,14 +64,11 @@ class TopDoctor extends Component {
 								return (
 									<div
 										className='section-content'
-										key={index}>
-										<img
-											src={imageBase64}
-											alt='doctor'
-											onClick={() =>
-												this.handleDetailDoctor(item)
-											}
-										/>
+										key={index}
+										onClick={() =>
+											this.handleDetailDoctor(item)
+										}>
+										<img src={imageBase64} alt='doctor' />
 
 										<div className='doctor-info'>
 											<h5>

@@ -27,7 +27,8 @@ class ManageDoctor extends Component {
 			selectedDoctor: '',
 			description: '',
 			listDoctors: [],
-			currentDoctor: '',
+
+			isEdit: false,
 		};
 	}
 
@@ -40,32 +41,6 @@ class ManageDoctor extends Component {
 			let dataSelect = this.buildDataSelect(this.props.allDoctors);
 			this.setState({
 				listDoctors: dataSelect,
-			});
-		}
-
-		if (
-			prevState.currentDoctor !== this.state.currentDoctor &&
-			this.state.currentDoctor.errCode === 0
-		) {
-			let infoCurrent = { ...this.state.currentDoctor.data };
-			if (infoCurrent) {
-				this.setState({
-					contentMarkdown: infoCurrent.contentMarkdown,
-					contentHTML: infoCurrent.contentHTML,
-					description: infoCurrent.description,
-				});
-			}
-		}
-
-		if (
-			prevState.currentDoctor !== this.state.currentDoctor &&
-			this.state.currentDoctor.errCode !== 0
-		) {
-			this.setState({
-				contentMarkdown: '',
-				contentHTML: '',
-				description: '',
-				currentDoctor: '',
 			});
 		}
 	}
@@ -97,16 +72,42 @@ class ManageDoctor extends Component {
 			contentMarkdown: this.state.contentMarkdown,
 			description: this.state.description,
 		};
-		if (!this.state.currentDoctor) {
+		if (!this.state.isEdit) {
 			this.props.saveInfoDoctor(dataSave);
 		} else {
 			this.props.saveEditInfoDoctor(dataSave);
 		}
+
+		this.setState({
+			contentMarkdown: '',
+			contentHTML: '',
+			description: '',
+			selectedDoctor: '',
+			isEdit: false,
+		});
 	};
 
 	handleChangeDoctor = async (selectedDoctor) => {
 		await this.props.checkInfoDoctorExist(selectedDoctor.value);
-		this.setState({ selectedDoctor, currentDoctor: this.props.doctorInfo });
+		if (this.props.doctorInfo.errCode === 0) {
+			let { contentHTML, contentMarkdown, description } =
+				this.props.doctorInfo.data;
+			this.setState({
+				selectedDoctor,
+				contentMarkdown,
+				contentHTML,
+				description,
+				isEdit: true,
+			});
+		} else {
+			this.setState({
+				selectedDoctor,
+				isEdit: false,
+				contentMarkdown: '',
+				contentHTML: '',
+				description: '',
+			});
+		}
 	};
 
 	handleChangeDescription = (e) => {
@@ -116,6 +117,7 @@ class ManageDoctor extends Component {
 	};
 
 	render() {
+		console.log(this.state);
 		return (
 			<>
 				<div className='container'>
