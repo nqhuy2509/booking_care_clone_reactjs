@@ -46,6 +46,9 @@
 			"manage-specialty": "Manage Specialties",
 			"handbook": "Handbooks",
 			"manage-handbook": "Manage Handbooks"
+		},
+		"doctor": {
+			"manage-doctor-schedule": "Manage Doctor's schedule"
 		}
 	},
 	"manage-user": {
@@ -68,5 +71,11 @@
 	"homepage": {
 		"otd-doctor": "Last week's featured doctor",
 		"more-info": "More info"
+	},
+	"manage-schedule": {
+		"title": "Manage doctor's schedule",
+		"choose-doctor": "Choose doctor",
+		"choose-date": "Choose date",
+		"save": "Save info"
 	}
 }

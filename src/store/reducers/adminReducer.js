@@ -1,3 +1,4 @@
+import { sample } from 'lodash';
 import actionTypes from '../actions/actionTypes';
 
 const initialState = {
@@ -10,6 +11,7 @@ const initialState = {
 	allDoctors: [],
 	doctorInfo: '',
 	doctorDetail: '',
+	allTime: '',
 };
 
 const adminReducer = (state = initialState, action) => {
@@ -104,6 +106,14 @@ const adminReducer = (state = initialState, action) => {
 				...state,
 			};
 		case actionTypes.FETCH_DETAIL_DOCTOR_FAILED:
+			return { ...state };
+		case actionTypes.FETCH_ALLCODE_TIME_SUCCESS:
+			state.allTime = action.data;
+			return {
+				...state,
+			};
+		case actionTypes.FETCH_ALLCODE_TIME_FAILED:
+			state.allTime = [];
 			return { ...state };
 		default:
 			return state;

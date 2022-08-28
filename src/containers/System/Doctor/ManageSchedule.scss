@@ -1,0 +1,25 @@
+.manage-schedule-container {
+    .hour-container {
+
+        display: flex;
+
+        gap      : 15px;
+        padding  : 20px 10px;
+        flex-wrap: wrap;
+
+        .btn-schedule-time {
+
+            &:hover {
+                border          : 1px solid #adb5bd;
+                background-color: #f8f9fa;
+                color           : #212529;
+
+            }
+
+            &.active {
+                background-color: #20c997;
+            }
+        }
+    }
+
+}

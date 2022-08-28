@@ -4,7 +4,6 @@ import HomeHeader from '../../HomePage/HomeHeader';
 import './DetailDoctor.scss';
 import * as actions from '../../../store/actions';
 
-import imgDoctor from '../../../assets/images/section/doctor/160049-bs-hoai-huong.jpg';
 import { LANGUAGES } from '../../../utils';
 
 class DetailDoctor extends Component {

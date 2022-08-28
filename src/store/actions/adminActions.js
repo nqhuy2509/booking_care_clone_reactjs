@@ -11,6 +11,7 @@ import {
 	getInfoDoctor as getInfoDoctorService,
 	saveEditInfoDoctor as saveEditInfoDoctorService,
 	getDetailDoctorById,
+	saveBulkScheduleDoctor as saveBulkScheduleDoctorService,
 } from '../../services/userService';
 
 import { toast } from 'react-toastify';
@@ -336,6 +337,51 @@ export const fetchDetailDoctor = (id) => {
 			dispatch({
 				type: actionTypes.FETCH_ALL_DOCTORS_FAILED,
 			});
+		}
+	};
+};
+
+export const fetchAllcodeTime = () => {
+	return async (dispatch, getState) => {
+		try {
+			let res = await getAllCodeService('time');
+			if (res && res.errCode === 0) {
+				dispatch({
+					type: actionTypes.FETCH_ALLCODE_TIME_SUCCESS,
+					data: res.data,
+				});
+			} else {
+				dispatch({
+					type: actionTypes.FETCH_ALLCODE_TIME_FAILED,
+				});
+			}
+		} catch (e) {
+			dispatch({
+				type: actionTypes.FETCH_ALLCODE_TIME_FAILED,
+			});
+			console.log(e);
+		}
+	};
+};
+
+export const saveBulkScheduleDoctor = (data) => {
+	return async (dispatch, getState) => {
+		try {
+			let res = await saveBulkScheduleDoctorService(data);
+			if (res && res.errCode === 0) {
+				dispatch({
+					type: actionTypes.SAVE_SCHEDULE_DOCTOR_SUCCESS,
+				});
+			} else {
+				dispatch({
+					type: actionTypes.SAVE_SCHEDULE_DOCTOR_FAILED,
+				});
+			}
+		} catch (e) {
+			dispatch({
+				type: actionTypes.SAVE_SCHEDULE_DOCTOR_FAILED,
+			});
+			console.log(e);
 		}
 	};
 };

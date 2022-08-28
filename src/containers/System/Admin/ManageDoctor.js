@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import actionTypes from '../../../store/actions/actionTypes';
 import * as actions from '../../../store/actions';
 import Select from 'react-select';
-import { LANGUAGES } from '../../../utils';
 
 // import './ManageDoctor.scss';
 
@@ -24,8 +22,8 @@ class ManageDoctor extends Component {
 		this.state = {
 			contentMarkdown: '',
 			contentHTML: '',
-			selectedDoctor: '',
 			description: '',
+			selectedDoctor: '',
 			listDoctors: [],
 
 			isEdit: false,
@@ -117,7 +115,6 @@ class ManageDoctor extends Component {
 	};
 
 	render() {
-		console.log(this.state);
 		return (
 			<>
 				<div className='container'>
